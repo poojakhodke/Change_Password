@@ -1,0 +1,11 @@
+<html>
+    <h1>This Project is about the Authentication</h1><br><br>
+Welcome:-- {{request.user}}<br><br>
+
+<a href= "{% url 'cpassold' %}">Change password with Old Credentials</a><br><br>
+<a href= "{% url 'cpass' %}">Change Password Directly</a><br><br><br><br>
+
+<a href= "{% url 'logout' %}">Logout</a><br><br>
+
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+    .messages{
+        color: green;
+    }
+       
+    
+</style>
+</head>
+    <body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+        <h2>Login System</h2>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            Username:- <input type="text" name="uname"><br><br>
+            Password:- <input type="password" name="pswd"><br><br>
+
+        <input type="submit" value="Login">
+        </form>
+    <a href= '{% url "signup" %}' class="btn btn-info" roles="button">Singn Up</a>
+    </body>
+</html>

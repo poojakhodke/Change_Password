@@ -1,0 +1,13 @@
+<html>
+    <title>Signup Page</title>
+
+<body>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% for f in form %}
+        {{f.label_tag}} {{f}} {{f.errors}}<br><br>
+        {% endfor %}
+    <input type="submit" value="SignUp">
+    </form>
+</body>
+</html>
